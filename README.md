@@ -1,2 +1,3 @@
 # Class Notes
  
+Michael Jamesley
