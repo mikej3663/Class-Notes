@@ -13,7 +13,27 @@ Three key takeaways from chapter 2:
         - Data should be cleaned under a name that makes sense for the data
 
 
+Here's an example of a table:
+                columns
+        23   87   56   12   45  
+        78   34   92   11   67  
+  rows  19   43   81   72   99  
+        53   27   88   60   42  
+        76   38   90   13   29 
 
+Here's an example of a list: 
+    yearly_profit = [10500, 12000, 9800, 13400, 15750, 11000, 14200, 9900, 12500, 13600]
+
+In this chapter, we looked at "for loops". Here is an example of a for loop that counts the years the yearly profit was greater than 10,500
+        count_greater_than_10500 = 0
+        
+        for profit in yearly_profit:
+            if profit > 10,500:
+                count_greater_than_10500 = count_greater_than_10500 + 1
+            else:
+                continue
+
+        print(count_greater_than_10500)
 
 
 Key links:
