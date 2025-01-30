@@ -14,12 +14,7 @@ Three key takeaways from chapter 2:
 
 
 Here's an example of a table:
-                columns
-        23   87   56   12   45  
-        78   34   92   11   67  
-  rows  19   43   81   72   99  
-        53   27   88   60   42  
-        76   38   90   13   29 
+    random_table = [[23, 87, 56, 12, 45],[78, 34, 92, 11, 67],[19, 43, 81, 72, 99],[53, 27, 88, 60, 42],[76, 38, 90, 13, 29]]
 
 Here's an example of a list: 
     yearly_profit = [10500, 12000, 9800, 13400, 15750, 11000, 14200, 9900, 12500, 13600]
