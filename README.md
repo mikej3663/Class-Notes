@@ -31,7 +31,7 @@ In this chapter, we looked at "for loops". Here is an example of a for loop that
         print(count_greater_than_10500)
 
 Success!
-https://vmscrub.com/wp-content/uploads/2017/05/happy-dance-animated-gif-image-1-2.gif
+![Happy Dance]https://vmscrub.com/wp-content/uploads/2017/05/happy-dance-animated-gif-image-1-2.gif
 
 
 Key links:
