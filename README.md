@@ -1,6 +1,6 @@
 ## Important Notes and Information from the Textbook
  
-Michael Jamesley
+By Michael Jamesley
 
 
 ## Three key takeaways from chapter 2:
@@ -19,7 +19,8 @@ Here's an example of a table:
 Here's an example of a list: 
     yearly_profit = [10500, 12000, 9800, 13400, 15750, 11000, 14200, 9900, 12500, 13600]
 
-In this chapter, we looked at "for loops". Here is an example of a for loop that counts the years the yearly profit was greater than 10,500
+In this chapter, we looked at "for loops". Here is an example of a for loop that counts the years the yearly profit was greater than 10,500:
+       code{
         count_greater_than_10500 = 0
         
         for profit in yearly_profit:
@@ -29,7 +30,7 @@ In this chapter, we looked at "for loops". Here is an example of a for loop that
                 continue
 
         print(count_greater_than_10500)
-
+        }
 Success!
 ![Happy Dance](https://vmscrub.com/wp-content/uploads/2017/05/happy-dance-animated-gif-image-1-2.gif)
 
