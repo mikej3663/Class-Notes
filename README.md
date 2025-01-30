@@ -3,7 +3,7 @@
 Michael Jamesley
 
 
-Three key takeaways from chapter 2:
+## Three key takeaways from chapter 2:
 
 1. Automate everything that can be automated
         - It is important to not *raw code* everything, make sure the code works for different data sets
