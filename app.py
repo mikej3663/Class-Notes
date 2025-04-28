@@ -21,11 +21,11 @@ sp500_predictions = sp500_actual + np.random.normal(0, 0.2, n_points)
 df_sp500 = pd.DataFrame({"Date": dates, "S&P 500 Actual": sp500_actual, "S&P 500 Predictions": sp500_predictions})
 
 # Model Type
-model_types = ["LSTM", "GRU", "Transformer"]
+model_types = ["Ridge", "Lasso", "HistGradientBoostingRegressor", "RandomForrest"]
 selected_model = st.sidebar.selectbox("Model Type", model_types)
 
 # Fold Type (CV)
-fold_types = ["Fold1", "Fold2", "Fold3"]
+fold_types = ["Rolling", "Expanding"]
 selected_fold = st.sidebar.selectbox("Fold Type (CV)", fold_types)
 
 # Metrics Data
