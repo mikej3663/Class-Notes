@@ -56,15 +56,28 @@ def generate_pseudo_data(n_points, model_type, fold_type):
 
     return df_prices, df_sp500, df_metrics
 
-# --- Sidebar Controls ---
-tickers = ["AAPL", "GOOGL", "MSFT", "AMZN"]
-selected_ticker = st.sidebar.selectbox("Ticker", tickers) # Ticker selection (currently not affecting data)
+# --- Pseudo Data Generation ---
+np.random.seed(42)
+n_points = 100
 
+# Ticker Data
+tickers = ["AAPL", "GOOGL", "MSFT", "AMZN"]
+selected_ticker = st.sidebar.selectbox("Ticker", tickers)
+
+# Model Type
 model_types = ["Ridge", "Lasso", "HistGradientBoostingRegressor", "RandomForrest"]
 selected_model = st.sidebar.selectbox("Model Type", model_types)
 
+# Fold Type (CV)
 fold_types = ["Rolling", "Expanding"]
 selected_fold = st.sidebar.selectbox("Fold Type (CV)", fold_types)
+
+# Metrics Data
+metrics_data = {
+    "Metrics": ["MSE", "MAE", "R²", "MAPE"],
+    "Value": [8.392, 2.222, 0.941, 0.014],
+}
+df_metrics = pd.DataFrame(metrics_data)
 
 # --- Generate Data Based on Selections ---
 df_prices, df_sp500, df_metrics = generate_pseudo_data(n_points, selected_model, selected_fold)
