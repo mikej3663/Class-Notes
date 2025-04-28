@@ -12,13 +12,13 @@ def generate_pseudo_data(n_points, model_type, fold_type):
     if model_type == "Ridge":
         predictions = actual_prices + np.random.normal(0, 3, n_points)
     elif model_type == "Lasso":
-        predictions = actual_prices + np.random.normal(0, 7, n_points)
+        predictions = actual_prices + np.random.normal(5, 7, n_points)
     elif model_type == "HistGradientBoostingRegressor":
-        predictions = actual_prices + np.random.normal(0, 4, n_points)
+        predictions = actual_prices + np.random.normal(9, 4, n_points)
     elif model_type == "RandomForrest":
-        predictions = actual_prices + np.random.normal(0, 6, n_points)
+        predictions = actual_prices + np.random.normal(2, 6, n_points)
     else:
-        predictions = actual_prices + np.random.normal(0, 5, n_points) # Default
+        predictions = actual_prices + np.random.normal(14, 5, n_points) # Default
 
     dates = pd.to_datetime(pd.date_range(start="2024-01-01", periods=n_points))
     df_prices = pd.DataFrame({"Date": dates, "Actual": actual_prices, "Predictions": predictions})
@@ -26,13 +26,13 @@ def generate_pseudo_data(n_points, model_type, fold_type):
     # S&P 500 Data (for comparison) - Slight variation based on fold type
     if fold_type == "Rolling":
         sp500_actual = np.random.randint(1, 5, n_points) + np.cumsum(np.random.normal(0, 0.08, n_points))
-        sp500_predictions = sp500_actual + np.random.normal(0, 0.15, n_points)
+        sp500_predictions = sp500_actual + np.random.normal(8, 0.15, n_points)
     elif fold_type == "Expanding":
         sp500_actual = np.random.randint(1, 5, n_points) + np.cumsum(np.random.normal(0, 0.12, n_points))
-        sp500_predictions = sp500_actual + np.random.normal(0, 0.25, n_points)
+        sp500_predictions = sp500_actual + np.random.normal(5, 0.25, n_points)
     else:
         sp500_actual = np.random.randint(1, 5, n_points) + np.cumsum(np.random.normal(0, 0.1, n_points))
-        sp500_predictions = sp500_actual + np.random.normal(0, 0.2, n_points)
+        sp500_predictions = sp500_actual + np.random.normal(5, 0.2, n_points)
 
     df_sp500 = pd.DataFrame({"Date": dates, "S&P 500 Actual": sp500_actual, "S&P 500 Predictions": sp500_predictions})
 
